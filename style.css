@@ -1,108 +1,123 @@
-*{
-    padding:0;
-    margin:0;
-}
-.hero{
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    width: 100%;
-    height: 114px;
-    background: white;
-}
-nav{
-    display:flex;
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: space-between;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-
-}
-nav ul li a{
-    text-decoration: solid;
-    color: black;
-    font-weight: bold;
+:root {
+  --red: #EA404D;
+  --purple: #311131;
+  --blue-dark: #12447E;
+  --blue-mid: #0663AA;
+  --blue-light: #0E92D2;
+  --white: #fff;
+  --black: #111;
 }
 
-nav ul li a:hover{
-    color: rgb(33, 165, 165);
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
 }
 
-.container{
-
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    text-align: center;
-    color: aliceblue;
-}
-.top-left{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:25px;
-    position: absolute;
-    top:40px;
-    left: 106px;
-}
-
-.top-left:hover{
-    font-size:35px;
-    color: hsl(206, 82%, 71%);
-    animation-delay:10s;
-    shape-rendering:unset;
+header#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue-dark);
+  color: var(--white);
+  position: relative;
+  background-image: url('images/bonfire-art.jpg'); /* Bonfire Art as background */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 
-.top-right{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:30px;
-    position: absolute;
-    top:250px;
-    right: 106px;
-}
-.top-right:hover{
-    font-size:35px;
-    color: hsl(213, 91%, 56%);
-    animation-delay:10s;
-    shape-rendering:unset;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0 0 2rem 0;
 }
 
-.footer{
-    height: 80px;
-    /* margin: 0px; */
-    /* padding: 0px; */
-    border: #06141b;
-    background: #06141b;
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
 }
-p{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background:#06141b ;
-    margin-left: 610px;
-    height: 30px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: #ccd0cf;
-    display:inline;
-}
-.contact{
-    margin-top: 20px;
-    margin-left: 540px;
-    color: #ccd0cf;
-}
-.button{
-    display: inline-block;
-    size: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    align-items: center;
-    color: #809ab0;
+nav a:hover {
+  color: var(--red);
 }
 
-.button:hover{
-    transform: scale(1.8);
-    transition: 0.2s;
-    color: #f5f9f9;
+.hero-content {
+  text-align: center;
+  background: rgba(49, 17, 49, 0.7); /* Overlay for readability */
+  padding: 2rem 3rem;
+  border-radius: 1rem;
 }
+
+section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section#about {
+  background-image: url('images/hand-watercolor.jpg');/* Hand Watercolor as background */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+
+section#education {
+  background-image: url('images/portrait-art.jpg'); /* Portrait Art as highlight */
+}
+
+section#skills, section#projects {
+  background-image: url('images/headphones-sketch.jpg'); /* Headphones Sketch as background */
+}
+
+section#awards {
+  background-image: url('images/ink-sketches.jpg'); /* Minimalist Ink Sketches as background */
+}
+
+h1, h2 {
+  color: var(--blue-dark);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  background: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-content {
+    padding: 1rem;
+  }
+  section {
+    padding: 2rem 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+} 
